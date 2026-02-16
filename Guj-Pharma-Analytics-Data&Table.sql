@@ -498,3 +498,13 @@ INSERT INTO AdverseEvents (ProductID, CompanyID, ReportDate, EventDescription, S
 
 GO
 
+-- INDEXES FOR PERFORMANCE OPTIMIZATION
+CREATE INDEX idx_sales_date ON Sales(SaleDate);
+CREATE INDEX idx_sales_company ON Sales(CompanyID);
+CREATE INDEX idx_sales_product ON Sales(ProductID);
+CREATE INDEX idx_products_company ON Products(CompanyID);
+CREATE INDEX idx_exports_date ON Exports(ExportDate);
+CREATE INDEX idx_financial_company_year ON FinancialPerformance(CompanyID, FinancialYear);
+CREATE INDEX idx_employees_company ON Employees(CompanyID);
+
+GO
