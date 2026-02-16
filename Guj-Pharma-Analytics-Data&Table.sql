@@ -41,7 +41,6 @@ CREATE TABLE ManufacturingFacilities (
     NumberOfProductionLines INT
 );
 
-
 -- TABLE 3: PRODUCTS
 CREATE TABLE Products (
     ProductID INT PRIMARY KEY IDENTITY(1,1),
@@ -71,7 +70,6 @@ CREATE TABLE Sales (
     DiscountPercent DECIMAL(5,2)
 );
 
-
 -- TABLE 5: RESEARCH & DEVELOPMENT
 CREATE TABLE RnD (
     RnDID INT PRIMARY KEY IDENTITY(1,1),
@@ -86,7 +84,6 @@ CREATE TABLE RnD (
     CollaborationPartner VARCHAR(200)
 );
 
-
 -- TABLE 6: REGULATORY COMPLIANCE
 CREATE TABLE RegulatoryCompliance (
     ComplianceID INT PRIMARY KEY IDENTITY(1,1),
@@ -97,7 +94,6 @@ CREATE TABLE RegulatoryCompliance (
     IssuingAuthority VARCHAR(200),
     ComplianceStatus VARCHAR(50) 
 );
-
 
 -- TABLE 7: EXPORTS
 CREATE TABLE Exports (
@@ -137,7 +133,6 @@ CREATE TABLE Suppliers (
     YearsInBusiness INT
 );
 
-
 -- TABLE 10: PROCUREMENT
 CREATE TABLE Procurement (
     ProcurementID INT PRIMARY KEY IDENTITY(1,1),
@@ -164,7 +159,6 @@ CREATE TABLE Employees (
     Experience INT, -- in years
     Qualification VARCHAR(100)
 );
-
 
 -- TABLE 12: FINANCIAL PERFORMANCE
 CREATE TABLE FinancialPerformance (
@@ -193,7 +187,6 @@ CREATE TABLE MarketShare (
     TotalMarketSizeCrore DECIMAL(15,2)
 );
 
-
 -- TABLE 14: CLINICAL TRIALS
 CREATE TABLE ClinicalTrials (
     TrialID INT PRIMARY KEY IDENTITY(1,1),
@@ -208,7 +201,6 @@ CREATE TABLE ClinicalTrials (
     TrialStatus VARCHAR(50), 
     PrincipalInvestigator VARCHAR(200)
 );
-
 
 -- TABLE 15: ADVERSE EVENTS
 CREATE TABLE AdverseEvents (
@@ -225,7 +217,6 @@ CREATE TABLE AdverseEvents (
 );
 
 GO
-
 
 -- INSERT COMPANIES (100+ Companies)
 INSERT INTO Companies (CompanyName, EstablishmentYear, HeadquarterCity, CompanyType, EmployeeCount, AnnualRevenueCrore, ExportCapability, WHOGMPCertified, ISOCertified, ContactEmail, ContactPhone, Website) VALUES
@@ -344,10 +335,7 @@ INSERT INTO ManufacturingFacilities (CompanyID, FacilityName, City, District, Fa
 (6, 'Sun Pharma Vadodara Unit', 'Vadodara', 'Vadodara', 'Tablets', 40000000, 'Active', 2003, 98000, 7),
 (7, 'Dishman CRAMS Facility', 'Ahmedabad', 'Ahmedabad', 'API', 2500000, 'Active', 1998, 120000, 4);
 
--- =====================================================
 -- INSERT PRODUCTS (Sample Data)
--- =====================================================
-
 INSERT INTO Products (CompanyID, ProductName, GenericName, TherapeuticCategory, DosageForm, Strength, PackSize, MRP, LaunchDate, IsPatented, PrescriptionRequired) VALUES
 -- Cadila Products
 (1, 'Lipaglyn', 'Saroglitazar', 'Cardiovascular', 'Tablet', '4mg', '30 Tablets', 450.00, '2013-06-01', 1, 1),
@@ -468,12 +456,10 @@ INSERT INTO FinancialPerformance (CompanyID, FinancialYear, Quarter, RevenueCror
 (1, 2024, 2, 1320.00, 190.00, 235.00, 48.00, 92.00, 14.4),
 (1, 2024, 3, 1280.00, 180.00, 225.00, 46.00, 88.00, 14.1),
 (1, 2024, 4, 1350.00, 195.00, 240.00, 50.00, 95.00, 14.4),
-
 (2, 2024, 1, 4500.00, 680.00, 850.00, 180.00, 320.00, 15.1),
 (2, 2024, 2, 4650.00, 710.00, 880.00, 185.00, 335.00, 15.3),
 (2, 2024, 3, 4550.00, 690.00, 860.00, 182.00, 328.00, 15.2),
 (2, 2024, 4, 4800.00, 740.00, 910.00, 195.00, 348.00, 15.4),
-
 (3, 2024, 1, 2150.00, 295.00, 370.00, 72.00, 155.00, 13.7),
 (3, 2024, 2, 2250.00, 315.00, 390.00, 75.00, 165.00, 14.0),
 (3, 2024, 3, 2180.00, 305.00, 380.00, 73.00, 158.00, 14.0),
@@ -511,3 +497,4 @@ INSERT INTO AdverseEvents (ProductID, CompanyID, ReportDate, EventDescription, S
 (13, 5, '2025-02-15', 'Nausea and vomiting', 'Moderate', 38, 'Male', 'Recovered', 'Anti-emetic prescribed');
 
 GO
+
