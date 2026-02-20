@@ -1,6 +1,6 @@
--- =====================================================
--- 1. BASIC SELECT & FILTERING (1-15)
--- =====================================================
+--|---------------------------------------------------|
+--      1. BASIC SELECT & FILTERING (1-15)
+--|---------------------------------------------------|
 select * from Companies
 
 -- Q1: List all pharmaceutical companies headquartered in Ahmedabad
@@ -96,4 +96,5 @@ where ExportCapability = '0'
 
 -- Q15: Show companies headquartered in Surat or Rajkot
 select * from Companies
+
 where HeadquarterCity in ('surat','rajkot')
