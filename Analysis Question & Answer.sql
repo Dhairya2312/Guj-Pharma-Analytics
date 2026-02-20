@@ -95,6 +95,7 @@ where ExportCapability = '0'
 
 
 -- Q15: Show companies headquartered in Surat or Rajkot
-select * from Companies
-
+select *
+from Companies
 where HeadquarterCity in ('surat','rajkot')
+
